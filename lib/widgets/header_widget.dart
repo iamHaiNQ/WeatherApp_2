@@ -15,7 +15,6 @@ class HeaderWidget extends StatefulWidget {
 
 class _HeaderWidgetState extends State<HeaderWidget> {
   String city = "";
-
   String date = DateFormat("yMMMMd").format(DateTime.now());
   final GlobalController globalController =
       Get.put(GlobalController(), permanent: true);
@@ -44,7 +43,9 @@ class _HeaderWidgetState extends State<HeaderWidget> {
           alignment: Alignment.topLeft,
           child: Text(
             city,
-            style: const TextStyle(fontSize: 35, height: 2),
+            style: const TextStyle(
+                fontSize: 35,
+                height: 2),
           ),
         ),
         Container(
