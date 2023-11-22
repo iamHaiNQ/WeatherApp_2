@@ -13,7 +13,7 @@ class GlobalController extends GetxController {
   RxDouble getLongitude() => _longitude;
 
   final weatherData = WeatherData().obs;
-  WeatherData getWeatherData(){
+  WeatherData getData(){
     return weatherData.value;
   }
 
