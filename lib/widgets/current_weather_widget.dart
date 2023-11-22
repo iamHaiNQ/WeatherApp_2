@@ -113,7 +113,7 @@ class CurrentWeatherWidget extends StatelessWidget {
             text: TextSpan(
               children: [
                 TextSpan(
-                  text: "${weatherDataCurrent.current.temp!.toInt()}°",
+                  text: "${weatherDataCurrent.current.temp!.toInt()}℃",
                   style: const TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 68,
