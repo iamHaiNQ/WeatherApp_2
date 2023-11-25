@@ -8,7 +8,6 @@ class WeatherDataHourly{
         .map((e) => Hourly.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
-
 }
 
 
