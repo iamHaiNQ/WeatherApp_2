@@ -1,8 +1,4 @@
-
-import 'package:weatherapp2/model/weather/temp.dart';
-import 'package:weatherapp2/model/weather/weather.dart';
-
-class WeatherDataDaily{
+class WeatherDataDaily {
   List<Daily> daily;
   WeatherDataDaily({required this.daily});
 
@@ -12,7 +8,6 @@ class WeatherDataDaily{
         .toList(),
   );
 }
-
 
 class Daily {
   int? dt;
@@ -26,9 +21,7 @@ class Daily {
 
   factory Daily.fromJson(Map<String, dynamic> json) => Daily(
     dt: json['dt'] as int?,
-    temp: json['temp'] == null
-        ? null
-        : Temp.fromJson(json['temp'] as Map<String, dynamic>),
+    temp: json['temp'] == null ? null : Temp.fromJson(json['temp'] as Map<String, dynamic>),
     weather: (json['weather'] as List<dynamic>?)
         ?.map((e) => Weather.fromJson(e as Map<String, dynamic>))
         .toList(),
@@ -38,6 +31,7 @@ class Daily {
     'dt': dt,
     'temp': temp?.toJson(),
     'weather': weather?.map((e) => e.toJson()).toList(),
+  };
 }
 
 class Temp {
@@ -69,8 +63,6 @@ class Temp {
   };
 }
 
-
-
 class Weather {
   int? id;
   String? main;
@@ -92,6 +84,3 @@ class Weather {
     'icon': icon,
   };
 }
-
-
-
