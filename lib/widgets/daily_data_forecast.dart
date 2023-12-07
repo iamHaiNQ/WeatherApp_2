@@ -7,13 +7,11 @@ import 'package:weatherapp2/utils/custom_colors.dart';
 class DailyDataForecast extends StatelessWidget {
   final WeatherDataDaily weatherDataDaily;
   const DailyDataForecast({super.key, required this.weatherDataDaily});
-
   String getDay(final day) {
     DateTime time = DateTime.fromMillisecondsSinceEpoch(day * 1000);
     final x = DateFormat('EEE').format(time);
     return x;
   }
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -42,7 +40,6 @@ class DailyDataForecast extends StatelessWidget {
       ),
     );
   }
-  
   Widget dailyList() {
     return SizedBox(
       height: 300,

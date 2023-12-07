@@ -50,7 +50,7 @@ class GlobalController extends GetxController {
     }
 
     return await Geolocator.getCurrentPosition(
-            desiredAccuracy: LocationAccuracy.high)
+        desiredAccuracy: LocationAccuracy.high)
         .then((value) {
       _lattitude.value = value.latitude;
       _longitude.value = value.longitude;
@@ -58,9 +58,9 @@ class GlobalController extends GetxController {
       return FetchWeatherAPI()
           .processData(value.latitude, value.longitude)
           .then((value) {
-              weatherData.value = value;
-             _isLoading.value = false;
-          });
+        weatherData.value = value;
+        _isLoading.value = false;
+      });
     });
   }
   RxInt getIndex(){

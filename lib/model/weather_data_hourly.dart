@@ -15,7 +15,6 @@ class Hourly {
   int? dt;
   int? temp;
   List<Weather>? weather;
-
   Hourly({
     this.dt,
     this.temp,
@@ -36,8 +35,6 @@ class Hourly {
     'weather': weather?.map((e) => e.toJson()).toList(),
   };
 }
-
-
 class Weather {
   int? id;
   String? main;

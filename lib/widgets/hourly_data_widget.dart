@@ -2,16 +2,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:weatherapp2/controller/global_controller.dart';
 import 'package:weatherapp2/model/weather_data_hourly.dart';
 import 'package:weatherapp2/utils/custom_colors.dart';
+import '../screens/controller/global_controller.dart';
 
 class HourlyDataWidget extends StatelessWidget {
   final WeatherDataHourly weatherDataHourly;
   RxInt cardIndex = GlobalController().getIndex();
-
   HourlyDataWidget({super.key, required this.weatherDataHourly});
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -23,7 +21,6 @@ class HourlyDataWidget extends StatelessWidget {
         ),
         hourlyList(),
       ],
-
     );
   }
   Widget hourlyList(){
@@ -77,11 +74,6 @@ class HourlyDetails extends StatelessWidget {
   int cardIndex;
   int timeStamp;
   String weatherIcon;
-
-  String getTime(int timeStamp) {
-    DateTime time = DateTime.fromMillisecondsSinceEpoch(timeStamp * 1000); // Chuyển đổi sang mili giây
-    return DateFormat.jm().format(time); // Định dạng đối tượng DateTime
-  }
   HourlyDetails(
       {super.key,
         required this.index,
@@ -90,6 +82,10 @@ class HourlyDetails extends StatelessWidget {
         required this.temp,
         required this.weatherIcon
       });
+  String getTime(int timeStamp) {
+    DateTime time = DateTime.fromMillisecondsSinceEpoch(timeStamp * 1000); // Chuyển đổi sang mili giây
+    return DateFormat.jm().format(time); // Định dạng đối tượng DateTime
+  }
   @override
   Widget build(BuildContext context) {
     return Column(
