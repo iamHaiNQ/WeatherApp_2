@@ -1,4 +1,3 @@
-import 'package:weatherapp2/model/weather_data.dart';
 
 class WeatherDataCurrent {
   final Current current;

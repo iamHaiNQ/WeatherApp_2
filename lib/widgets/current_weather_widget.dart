@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weatherapp2/model/weather_data_current.dart';
+import 'package:weatherapp2/utils/app_images.dart';
 import 'package:weatherapp2/utils/custom_colors.dart';
 
 class CurrentWeatherWidget extends StatelessWidget {
@@ -32,7 +33,8 @@ class CurrentWeatherWidget extends StatelessWidget {
                 color: CustomColors.cardColor,
                 borderRadius: BorderRadius.circular(15),
               ),
-              child: Image.asset("assets/icons/windspeed.png"),
+              child:
+                Image.asset(AppImages.imgWinspeed),
             ),
             Container(
               height: 60,
@@ -42,7 +44,7 @@ class CurrentWeatherWidget extends StatelessWidget {
                 color: CustomColors.cardColor,
                 borderRadius: BorderRadius.circular(15),
               ),
-              child: Image.asset("assets/icons/clouds.png"),
+              child: Image.asset(AppImages.imgClouds),
             ),
             Container(
               height: 60,
@@ -52,7 +54,7 @@ class CurrentWeatherWidget extends StatelessWidget {
                 color: CustomColors.cardColor,
                 borderRadius: BorderRadius.circular(15),
               ),
-              child: Image.asset("assets/icons/humidity.png"),
+              child: Image.asset(AppImages.imgHumidity),
             ),
           ],
         ),
@@ -129,6 +131,5 @@ class CurrentWeatherWidget extends StatelessWidget {
         )
       ],
     );
-
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:weatherapp2/utils/app_images.dart';
 import 'package:weatherapp2/utils/custom_colors.dart';
 import 'package:weatherapp2/widgets/comfort_level.dart';
 import 'package:weatherapp2/widgets/current_weather_widget.dart';
@@ -29,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(
-                    "assets/icons/clouds.png",
+                    AppImages.imgLoading,
                     height: 200,
                     width: 200,
                   ),
